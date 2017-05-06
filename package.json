@@ -1,7 +1,7 @@
 {
   "name": "langums",
   "displayName": "LangUMS",
-  "version": "0.4.3",
+  "version": "0.4.5",
   "publisher": "langums",
   "description": "LangUMS integration",
   "authors": [
@@ -160,7 +160,12 @@
                 "type": "boolean",
                 "description": "Enable logging of the debugger protocol.",
                 "default": true
-              }
+              },
+              "compileOnly": {
+                "type": "boolean",
+                "description": "If true will not launch a debugger session, but just compiles the map.",
+                "default": false
+               }
             }
           }
         },
@@ -171,7 +176,8 @@
             "langums": "${workspaceRoot}/langums.exe",
             "map": "${workspaceRoot}/my_map.scx",
             "lang": "${workspaceRoot}/my_map.l",
-            "dst": "${workspaceRoot}/my_map_release.scx"
+            "dst": "${workspaceRoot}/my_map_release.scx",
+            "compileOnly": false
         }]
       }
     ]
