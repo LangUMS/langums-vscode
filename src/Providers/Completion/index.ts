@@ -55,6 +55,7 @@ class CompletionProvider implements vscode.CompletionItemProvider
             var newItem:vscode.CompletionItem = new vscode.CompletionItem(map.locations[i].name);
             newItem.detail = "Location"
             newItem.kind = vscode.CompletionItemKind.Enum;
+            newItem.insertText = newItem.label + "\"";
             this.locations.push(newItem);
         }
 
