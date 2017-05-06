@@ -1,0 +1,1073 @@
+{
+    "completionCategories":
+    [
+        {
+            "kind": "Function",
+            "type": "Unit Function",
+            "tokens":[
+                {
+                    "token": "spawn",
+                    "documentation": "Spawns units at a location with optional properties.",
+                    "snippet": "spawn({{Unit}}, {{Player}}, {{Expression}}, {{Location}}, {{OptionalProps}});{{}}"
+                },
+                {
+                    "token": "kill",
+                    "documentation": "Kills units at an optional location.",
+                    "snippet": "kill({{Unit}}, {{Player}}, {{Expression}}, {{OptionalLocation}});{{}}"
+                },
+                {
+                    "token": "remove",
+                    "documentation": "Removes units at an optional location.",
+                    "snippet": "remove({{Unit}}, {{Player}}, {{Expression}}, {{OptionalLocation}});{{}}"
+                },
+                {
+                    "token": "move",
+                    "documentation": "Moves units from one location to another.",
+                    "snippet": "move({{Unit}}, {{Player}}, {{Expression}}, {{SrcLocation}}, {{DstLocation}});{{}}"
+                },
+                {
+                    "token": "order",
+                    "documentation": "Orders a units to move, attack or patrol.",
+                    "snippet": "order({{Unit}}, {{Player}}, {{Order}}, {{SrcLocation}}, {{DstLocation}});{{}}"
+                },
+                {
+                    "token": "modify",
+                    "documentation": "Modifies a unit's HP, SP, energy or hangar count.",
+                    "snippet": "modify({{Unit}}, {{Player}}, {{Expression}}, {{UnitMod}}, {{ModQuantity}}, {{Location}});{{}}"
+                },
+                {
+                    "token": "give",
+                    "documentation": "Gives units to another player.",
+                    "snippet": "give({{Unit}}, {{SrcPlayer}}, {{DstPlayer}}, {{Expression}}, {{Location}});{{}}"
+                },
+                {
+                    "token": "set_doodad",
+                    "documentation": "Sets/toggles doodad State.",
+                    "snippet": "set_doodad({{Player}}, {{Unit}}, {{State}}, {{Location}});{{}}"
+                },
+                {
+                    "token": "set_invincibility",
+                    "documentation": "Sets/toggles invincibility for units at location.",
+                    "snippet": "set_invincibility({{Player}}, {{Unit}}, {{State}}, {{Location}});{{}}"
+                },
+                {
+                    "token": "run_ai_script",
+                    "documentation": "Runs an AI script.",
+                    "snippet": "run_ai_script({{Player}}, {{AIScript}}, {{OptionalLocation}});{{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Function",
+            "type": "UI Function",
+            "tokens":[
+                {
+                    "token": "center_view",
+                    "documentation": "Centers the view on a location for a player.",
+                    "snippet": "center_view({{Player}}, {{Location}});{{}}"
+                },
+                {
+                    "token": "ping",
+                    "documentation": "Triggers a minimap ping on a location for a player.",
+                    "snippet": "ping({{Player}}, {{Location}});{{}}"
+                },
+                {
+                    "token": "talking_portrait",
+                    "documentation": "Shows the unit talking portrait for an amount of seconds.",
+                    "snippet": "talking_portrait({{Player}}, {{Unit}}, {{Quantity}});{{}}"
+                },
+                {
+                    "token": "set_vision",
+                    "documentation": "Sets whether DstPlayer will share vision with SrcPlayer.",
+                    "snippet": "set_vision({{SrcPlayer}}, {{DstPlayer}}, {{Bool}});{{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Function",
+            "type": "Resource Function",
+            "tokens":[
+                {
+                    "token": "set_resource",
+                    "documentation": "Sets the resource count for a player.",
+                    "snippet" : "set_resource({{Player}}, {{ResourceType}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "add_resource",
+                    "documentation": "Gives resources to a player.",
+                    "snippet" : "add_resource({{Player}}, {{ResourceType}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "take_resource",
+                    "documentation": "Takes resources from a player.",
+                    "snippet" : "take_resource({{Player}}, {{ResourceType}}, {{Expression}});{{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Function",
+            "type": "Function",
+            "tokens":[
+                {
+                    "token": "poll_events",
+                    "documentation": "Runs any associated event handlers.",
+                    "snippet": "poll_events();"
+                },
+                {
+                    "token": "print",
+                    "documentation": "Prints a message, defaults to all players.",
+                    "snippet": "print({{Text}}, {{OptionalPlayer}});{{}}"
+                },
+                {
+                    "token": "random",
+                    "documentation": "Returns a random value between 0 and 255 (inclusive).",
+                    "snippet": "random();"
+                },
+                {
+                    "token": "is_present",
+                    "documentation": "Checks if one or more players are in the game.",
+                    "snippet": "is_present({{Player...}});{{}}"
+                },
+                {
+                    "token": "move_loc",
+                    "documentation": "Centers DstLocation on a unit at SrcLocation.",
+                    "snippet": "move_loc({{Unit}}, {{Player}}, {{SrcLocation}}, {{DstLocation}});{{}}"
+                },
+                {
+                    "token": "end",
+                    "documentation": "Ends the game for player with EndCondition.",
+                    "snippet": "end({{Player}}, {{EndCondition}});{{}}"
+                },
+                {
+                    "token": "set_alliance",
+                    "documentation": "Sets the alliance status between two players.",
+                    "snippet": "set_alliance({{Player}}, {{TargetPlayer}}, {{AllianceStatus}});{{}}"
+                },
+                {
+                    "token": "set_mission_objectives",
+                    "documentation": "Sets the mission objectives, defaults to all players.",
+                    "snippet": "set_mission_objectives({{Text}}, {{OptionalPlayer}});{{}}"
+                },
+                {
+                    "token": "sleep",
+                    "documentation": "Waits for a given amount of milliseconds.",
+                    "snippet": "sleep({{Quantity}});{{}}"
+                },
+                {
+                    "token": "pause_game",
+                    "documentation": "Pauses the game (singleplayer only).",
+                    "snippet": "pause_game();"
+                },
+                {
+                    "token": "unpause_game",
+                    "documentation": "Unpauses the game (singleplayer only).",
+                    "snippet": "unpause_game();"
+                },
+                {
+                    "token": "set_next_scenario",
+                    "documentation": "Sets the next map to run (singleplayer only).",
+                    "snippet": "set_next_scenario({{Text}});{{}}"
+                },
+                {
+                    "token": "play_sound",
+                    "documentation": "Plays a sound from a .wav file.",
+                    "snippet": "play_sound({{Text}});{{}}"
+                },
+                {
+                    "token": "clear_buffered_events",
+                    "documentation": "Plays a sound from a .wav file. Defaults to all players.",
+                    "snippet": "clear_buffered_events();{{}}"
+                },
+                {
+                    "token": "debugger",
+                    "documentation": "Places a debugger breakpoint.",
+                    "snippet": "debugger();{{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Function",
+            "type": "Score Function",
+            "tokens":[
+                {
+                    "token": "set_score",
+                    "documentation": "Sets the score of a player.",
+                    "snippet": "set_score({{Player}}, {{ScoreType}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "add_score",
+                    "documentation": "Add to the score of a player.",
+                    "snippet": "add_score({{Player}}, {{ScoreType}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "subtract_score",
+                    "documentation": "Subtracts from the score of a player.",
+                    "snippet": "subtract_score({{Player}}, {{ScoreType}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "set_deaths",
+                    "documentation": "Sets the death count for a unit. (Caution!)",
+                    "snippet":"set_deaths({{Player}}, {{Unit}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "add_deaths",
+                    "documentation": "Adds to the death count for a unit. (Caution!)",
+                    "snippet": "add_deaths({{Player}}, {{Unit}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "remove_deaths",
+                    "documentation": "Subtracts from the death count for a unit. (Caution!)",
+                    "snippet": "remove_deaths({{Player}}, {{Unit}}, {{Expression}});{{}}"
+                },
+                {
+                    "token": "show_leaderboard",
+                    "documentation": "Shows the leaderboard."
+                },
+                {
+                    "token": "show_leaderboard_goal",
+                    "documentation": "Shows the leaderboard with a goal."
+                },
+                {
+                    "token": "leaderboard_show_cpu",
+                    "documentation": "Shows/hides computer players from the leaderboard.",
+                    "snippet": "leaderboard_show_cpu({{State}});{{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Function",
+            "type": "Game Function",
+            "tokens":[
+                {
+                    "token": "set_countdown",
+                    "documentation": "Sets the countdown timer.",
+                    "snippet": "set_countdown({{Expression}});{{}}"
+                },
+                {
+                    "token": "pause_countdown",
+                    "documentation": "Pauses the countdown timer.",
+                    "snippet": "pause_countdown();"
+                },
+                {
+                    "token": "unpause_countdown",
+                    "documentation": "Unpauses the countdown timer.",
+                    "snippet": "unpause_countdown();"
+                },
+                {
+                    "token": "mute_unit_speech",
+                    "documentation": "Mutes unit speech.",
+                    "snippet": "mute_unit_speech();"
+                },
+                {
+                    "token": "unmute_unit_speech",
+                    "documentation": "Unmutes unit speech.",
+                    "snippet": "unmute_unit_speech();"
+                }
+            ]
+        },
+        {
+            "kind": "Condition",
+            "type": "Unit Condition",
+            "tokens":[
+                {
+                    "token": "bring",
+                    "documentation": "When a player owns a quantity of units at location.",
+                    "snippet": "bring({{Player}}, {{Comparison}}, {{Quantity}}, {{Unit}}, {{Location}}){{}}"
+                },
+                {
+                    "token": "commands",
+                    "documentation": "When a player commands a number of units.",
+                    "snippet": "commands({{Player}}, {{Comparison}}, {{Quantity}}, {{Unit}}){{}}"
+                },
+                {
+                    "token": "commands_least",
+                    "documentation": "When a player commands the least number of units at an optional location.",
+                    "snippet": "commands_least({{Player}}, {{Unit}}, {{OptionalLocation}}){{}}"
+                },
+                {
+                    "token": "commands_most",
+                    "documentation": "When a player commands the most number of units at an optional location.",
+                    "snippet": "commands_most({{Player}}, {{Unit}}, {{optional: Location}}){{}}"
+                },
+                {
+                    "token": "killed",
+                    "documentation": "When a player has killed a number of units.",
+                    "snippet": "killed({{Player}}, {{Comparison}}, {{Quantity}}, {{Unit}}){{}}"
+                },
+                {
+                    "token": "killed_least",
+                    "documentation": "When a player has killed the lowest quantity of a given unit.",
+                    "snippet": "killed_least({{Player}}, {{Unit}}){{}}"
+                },
+                {
+                    "token": "killed_most",
+                    "documentation": "When a player has killed the highest quantity of a given unit.",
+                    "snippet": "killed_most({{Player}}, {{Unit}}){{}}"
+                },
+                {
+                    "token": "deaths",
+                    "documentation": "When a player has lost a number of units.",
+                    "snippet": "deaths({{Player}}, {{Comparison}}, {{Quantity}}, {{Unit}}) =>{{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Condition",
+            "type": "Resource Condition",
+            "tokens":[
+                {
+                    "token": "accumulate",
+                    "documentation": "When a player owns a quantity of resources.",
+                    "snippet": "accumulate({{Player}}, {{Comparison}}, {{Quantity}}, {{ResourceType}}){{}}"
+                },
+                {
+                    "token": "most_resources",
+                    "documentation": "When a player owns the most of a given resource.",
+                    "snippet": "most_resources({{Player}}, {{ResourceType}}){{}}"
+                },
+                {
+                    "token": "least_resources",
+                    "documentation": "When a player owns the least of a given resource.",
+                    "snippet": "least_resources({{Player}}, {{ResourceType}}){{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Condition",
+            "type": "Game Condition",
+            "tokens":[
+                {
+                    "token": "elapsed_time",
+                    "documentation": "When a certain amount of time has elapsed.",
+                    "snippet": "elapsed_time({{Comparison}}, {{Quantity}}){{}}"
+                },
+                {
+                    "token": "countdown",
+                    "documentation": "When the countdown timer reaches a amount of seconds.",
+                    "snippet": "countdown({{Comparison}}, {{Quantity}}){{}}"
+                },
+                {
+                    "token": "opponents",
+                    "documentation": "When a player has a number of opponents remaining in the game.",
+                    "snippet": "opponents({{Player}}, {{Comparison}}, {{Quantity}}){{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Condition",
+            "type": "Score Condition",
+            "tokens":[
+                {
+                    "token": "score",
+                    "documentation": "When a player's score reaches a given quantity.",
+                    "snippet": "score({{Player}}, {{ScoreType}}, {{Comparison}}, {{Quantity}}){{}}"
+                },
+                {
+                    "token": "lowest_score",
+                    "documentation": "When a player has the lowest score.",
+                    "snippet": "lowest_score({{Player}}, {{ScoreType}}){{}}"
+                },
+                {
+                    "token": "highest_score",
+                    "documentation": "When a player has the highest score.",
+                    "snippet": "highest_score({{Player}}, {{ScoreType}}){{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Condition",
+            "type": "Misc Condition",
+            "tokens":[
+                {
+                    "token": "value",
+                    "documentation": "When a global variable has a specific value.",
+                    "snippet": "value({{Expression}}, {{Comparison}}, {{Quantity}}){{}}"
+                }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "EndCondition",
+            "tokens":[
+                { "token": "Victory" },
+                { "token": "Defeat" },
+                { "token": "Draw" }
+            ]
+        },
+
+        {
+            "kind": "Enum",
+            "type": "ResourceType",
+            "tokens":[
+                { "token": "Minerals" },
+                { "token": "Ore" },
+                { "token": "Gas" },
+                { "token": "Vespense" },
+                { "token": "Both" },
+                { "token": "OreAndGas" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "Comparison",
+            "tokens":[
+                { "token": "AtLeast" },
+                { "token": "LessOrEquals" },
+                { "token": "AtMost" },
+                { "token": "GreaterOrEquals" },
+                { "token": "Exactly" },
+                { "token": "Equals" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "Order",
+            "tokens":[
+                { "token": "Move" },
+                { "token": "Attack" },
+                { "token": "Patrol" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "UnitMod",
+            "tokens":[
+                { "token": "Health" },
+                { "token": "Energy" },
+                { "token": "Shields" },
+                { "token": "Hangar" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "State",
+            "tokens":[
+                { "token": "Enable" },
+                { "token": "Disable" },
+                { "token": "Toggle" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "AllianceStatus",
+            "tokens":[
+                { "token": "Ally" },
+                { "token": "Enemy" },
+                { "token": "AlliedVictory" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "Player",
+            "tokens":[
+                { "token": "Player1" },
+                { "token": "Player2" },
+                { "token": "Player3" },
+                { "token": "Player4" },
+                { "token": "Player5" },
+                { "token": "Player6" },
+                { "token": "Player7" },
+                { "token": "Player8" },
+                { "token": "Player9" },
+                { "token": "Player10" },
+                { "token": "Player11" },
+                { "token": "Player12" },
+                { "token": "AllPlayers" },
+                { "token": "NeutralPlayers" },
+                { "token": "Force1" },
+                { "token": "Force2" },
+                { "token": "Force3" },
+                { "token": "Force4" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "ScoreType",
+            "tokens":[
+                { "token": "Total" },
+                { "token": "Units" },
+                { "token": "Buildings" },
+                { "token": "UnitsAndBuildings" },
+                { "token": "Kills" },
+                { "token": "Razings" },
+                { "token": "KillsAndRazings" },
+                { "token": "Custom" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "UnitProperty",
+            "tokens":[
+                { "token": "HitPoints" },
+                { "token": "Health" },
+                { "token": "ShieldPoints" },
+                { "token": "Shields" },
+                { "token": "Energy" },
+                { "token": "ResourceAmount" },
+                { "token": "HangarCount" },
+                { "token": "Cloaked" },
+                { "token": "Burrowed" },
+                { "token": "InTransit" },
+                { "token": "Hallucinated" },
+                { "token": "Invincible" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type":"Unit",
+            "tokens":[
+                { "token": "TerranMarine" },
+                { "token": "TerranGhost" },
+                { "token": "TerranVulture" },
+                { "token": "TerranGoliath" },
+                { "token": "TerranGoliathTurret" },
+                { "token": "TerranSiegeTankTankMode" },
+                { "token": "TerranSiegeTankTankModeTurret" },
+                { "token": "TerranSCV" },
+                { "token": "TerranWraith" },
+                { "token": "TerranScienceVessel" },
+                { "token": "HeroGuiMontag" },
+                { "token": "TerranDropship" },
+                { "token": "TerranBattlecruiser" },
+                { "token": "TerranVultureSpiderMine" },
+                { "token": "TerranNuclearMissile" },
+                { "token": "TerranCivilian" },
+                { "token": "HeroSarahKerrigan" },
+                { "token": "HeroAlanSchezar" },
+                { "token": "HeroAlanSchezarTurret" },
+                { "token": "HeroJimRaynorVulture" },
+                { "token": "HeroJimRaynorMarine" },
+                { "token": "HeroTomKazansky" },
+                { "token": "HeroMagellan" },
+                { "token": "HeroEdmundDukeTankMode" },
+                { "token": "HeroEdmundDukeTankModeTurret" },
+                { "token": "HeroEdmundDukeSiegeMode" },
+                { "token": "HeroEdmundDukeSiegeModeTurret" },
+                { "token": "HeroArcturusMengsk" },
+                { "token": "HeroHyperion" },
+                { "token": "HeroNoradII" },
+                { "token": "TerranSiegeTankSiegeMode" },
+                { "token": "TerranSiegeTankSiegeModeTurret" },
+                { "token": "TerranFirebat" },
+                { "token": "SpellScannerSweep" },
+                { "token": "TerranMedic" },
+                { "token": "ZergLarva" },
+                { "token": "ZergEgg" },
+                { "token": "ZergZergling" },
+                { "token": "ZergHydralisk" },
+                { "token": "ZergUltralisk" },
+                { "token": "ZergBroodling" },
+                { "token": "ZergDrone" },
+                { "token": "ZergOverlord" },
+                { "token": "ZergMutalisk" },
+                { "token": "ZergGuardian" },
+                { "token": "ZergQueen" },
+                { "token": "ZergDefiler" },
+                { "token": "ZergScourge" },
+                { "token": "HeroTorrasque" },
+                { "token": "HeroMatriarch" },
+                { "token": "ZergInfestedTerran" },
+                { "token": "HeroInfestedKerrigan" },
+                { "token": "HeroUncleanOne" },
+                { "token": "HeroHunterKiller" },
+                { "token": "HeroDevouringOne" },
+                { "token": "HeroKukulzaMutalisk" },
+                { "token": "HeroKukulzaGuardian" },
+                { "token": "HeroYggdrasill" },
+                { "token": "TerranValkyrie" },
+                { "token": "ZergCocoon" },
+                { "token": "ProtossCorsair" },
+                { "token": "ProtossDarkTemplar" },
+                { "token": "ZergDevourer" },
+                { "token": "ProtossDarkArchon" },
+                { "token": "ProtossProbe" },
+                { "token": "ProtossZealot" },
+                { "token": "ProtossDragoon" },
+                { "token": "ProtossHighTemplar" },
+                { "token": "ProtossArchon" },
+                { "token": "ProtossShuttle" },
+                { "token": "ProtossScout" },
+                { "token": "ProtossArbiter" },
+                { "token": "ProtossCarrier" },
+                { "token": "ProtossInterceptor" },
+                { "token": "HeroDarkTemplar" },
+                { "token": "HeroZeratul" },
+                { "token": "HeroTassadarZeratulArchon" },
+                { "token": "HeroFenixZealot" },
+                { "token": "HeroFenixDragoon" },
+                { "token": "HeroTassadar" },
+                { "token": "HeroMojo" },
+                { "token": "HeroWarbringer" },
+                { "token": "HeroGantrithor" },
+                { "token": "ProtossReaver" },
+                { "token": "ProtossObserver" },
+                { "token": "ProtossScarab" },
+                { "token": "HeroDanimoth" },
+                { "token": "HeroAldaris" },
+                { "token": "HeroArtanis" },
+                { "token": "CritterRhynadon" },
+                { "token": "CritterBengalaas" },
+                { "token": "SpecialCargoShip" },
+                { "token": "SpecialMercenaryGunship" },
+                { "token": "CritterScantid" },
+                { "token": "CritterKakaru" },
+                { "token": "CritterRagnasaur" },
+                { "token": "CritterUrsadon" },
+                { "token": "ZergLurkerEgg" },
+                { "token": "HeroRaszagal" },
+                { "token": "HeroSamirDuran" },
+                { "token": "HeroAlexeiStukov" },
+                { "token": "SpecialMapRevealer" },
+                { "token": "HeroGerardDuGalle" },
+                { "token": "ZergLurker" },
+                { "token": "HeroInfestedDuran" },
+                { "token": "SpellDisruptionWeb" },
+                { "token": "TerranCommandCenter" },
+                { "token": "TerranComsatStation" },
+                { "token": "TerranNuclearSilo" },
+                { "token": "TerranSupplyDepot" },
+                { "token": "TerranRefinery" },
+                { "token": "TerranBarracks" },
+                { "token": "TerranAcademy" },
+                { "token": "TerranFactory" },
+                { "token": "TerranStarport" },
+                { "token": "TerranControlTower" },
+                { "token": "TerranScienceFacility" },
+                { "token": "TerranCovertOps" },
+                { "token": "TerranPhysicsLab" },
+                { "token": "UnusedTerran1" },
+                { "token": "TerranMachineShop" },
+                { "token": "UnusedTerran2" },
+                { "token": "TerranEngineeringBay" },
+                { "token": "TerranArmory" },
+                { "token": "TerranMissileTurret" },
+                { "token": "TerranBunker" },
+                { "token": "SpecialCrashedNoradII" },
+                { "token": "SpecialIonCannon" },
+                { "token": "PowerupUrajCrystal" },
+                { "token": "PowerupKhalisCrystal" },
+                { "token": "ZergInfestedCommandCenter" },
+                { "token": "ZergHatchery" },
+                { "token": "ZergLair" },
+                { "token": "ZergHive" },
+                { "token": "ZergNydusCanal" },
+                { "token": "ZergHydraliskDen" },
+                { "token": "ZergDefilerMound" },
+                { "token": "ZergGreaterSpire" },
+                { "token": "ZergQueensNest" },
+                { "token": "ZergEvolutionChamber" },
+                { "token": "ZergUltraliskCavern" },
+                { "token": "ZergSpire" },
+                { "token": "ZergSpawningPool" },
+                { "token": "ZergCreepColony" },
+                { "token": "ZergSporeColony" },
+                { "token": "UnusedZerg1" },
+                { "token": "ZergSunkenColony" },
+                { "token": "SpecialOvermindWithShell" },
+                { "token": "SpecialOvermind" },
+                { "token": "ZergExtractor" },
+                { "token": "SpecialMatureChrysalis" },
+                { "token": "SpecialCerebrate" },
+                { "token": "SpecialCerebrateDaggoth" },
+                { "token": "UnusedZerg2" },
+                { "token": "ProtossNexus" },
+                { "token": "ProtossRoboticsFacility" },
+                { "token": "ProtossPylon" },
+                { "token": "ProtossAssimilator" },
+                { "token": "UnusedProtoss1" },
+                { "token": "ProtossObservatory" },
+                { "token": "ProtossGateway" },
+                { "token": "UnusedProtoss2" },
+                { "token": "ProtossPhotonCannon" },
+                { "token": "ProtossCitadelofAdun" },
+                { "token": "ProtossCyberneticsCore" },
+                { "token": "ProtossTemplarArchives" },
+                { "token": "ProtossForge" },
+                { "token": "ProtossStargate" },
+                { "token": "SpecialStasisCellPrison" },
+                { "token": "ProtossFleetBeacon" },
+                { "token": "ProtossArbiterTribunal" },
+                { "token": "ProtossRoboticsSupportBay" },
+                { "token": "ProtossShieldBattery" },
+                { "token": "SpecialKhaydarinCrystalForm" },
+                { "token": "SpecialProtossTemple" },
+                { "token": "SpecialXelNagaTemple" },
+                { "token": "ResourceMineralField" },
+                { "token": "ResourceMineralFieldType2" },
+                { "token": "ResourceMineralFieldType3" },
+                { "token": "UnusedCave" },
+                { "token": "UnusedCaveIn" },
+                { "token": "UnusedCantina" },
+                { "token": "UnusedMiningPlatform" },
+                { "token": "UnusedIndependantCommandCenter" },
+                { "token": "SpecialIndependantStarport" },
+                { "token": "UnusedIndependantJumpGate" },
+                { "token": "UnusedRuins" },
+                { "token": "UnusedKhaydarinCrystalFormation" },
+                { "token": "ResourceVespeneGeyser" },
+                { "token": "SpecialWarpGate" },
+                { "token": "SpecialPsiDisrupter" },
+                { "token": "UnusedZergMarker" },
+                { "token": "UnusedTerranMarker" },
+                { "token": "UnusedProtossMarker" },
+                { "token": "SpecialZergBeacon" },
+                { "token": "SpecialTerranBeacon" },
+                { "token": "SpecialProtossBeacon" },
+                { "token": "SpecialZergFlagBeacon" },
+                { "token": "SpecialTerranFlagBeacon" },
+                { "token": "SpecialProtossFlagBeacon" },
+                { "token": "SpecialPowerGenerator" },
+                { "token": "SpecialOvermindCocoon" },
+                { "token": "SpellDarkSwarm" },
+                { "token": "SpecialFloorMissileTrap" },
+                { "token": "SpecialFloorHatch" },
+                { "token": "SpecialUpperLevelDoor" },
+                { "token": "SpecialRightUpperLevelDoor" },
+                { "token": "SpecialPitDoor" },
+                { "token": "SpecialRightPitDoor" },
+                { "token": "SpecialFloorGunTrap" },
+                { "token": "SpecialWallMissileTrap" },
+                { "token": "SpecialWallFlameTrap" },
+                { "token": "SpecialRightWallMissileTrap" },
+                { "token": "SpecialRightWallFlameTrap" },
+                { "token": "SpecialStartLocation" },
+                { "token": "PowerupFlag" },
+                { "token": "PowerupYoungChrysalis" },
+                { "token": "PowerupPsiEmitter" },
+                { "token": "PowerupDataDisk" },
+                { "token": "PowerupKhaydarinCrystal" },
+                { "token": "PowerupMineralClusterType1" },
+                { "token": "PowerupMineralClusterType2" },
+                { "token": "PowerupProtossGasOrbType1" },
+                { "token": "PowerupProtossGasOrbType2" },
+                { "token": "PowerupZergGasSacType1" },
+                { "token": "PowerupZergGasSacType2" },
+                { "token": "PowerupTerranGasTankType1" },
+                { "token": "PowerupTerranGasTankType2" },
+                { "token": "None" },
+                { "token": "AllUnits" },
+                { "token": "Men" },
+                { "token": "Buildings" },
+                { "token": "Factories" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "AIScript",
+            "tokens":[
+                { "token": "JunkYardDog" },
+                { "token": "MoveDarkTemplarsToRegion" },
+                { "token": "ValueThisAreaHigher" },
+                { "token": "EnterClosestBunker" },
+                { "token": "SetGenericCommandTarget" },
+                { "token": "MakeTheseUnitsPatrol" },
+                { "token": "EnterTransport" },
+                { "token": "ExitTransport" },
+                { "token": "AINukeHere" },
+                { "token": "AIHarassHere" },
+                { "token": "CastDisruptionWeb" },
+                { "token": "CastRecall" },
+                { "token": "SendAllUnitsOnStrategicSuicideMissions" },
+                { "token": "SendAllUnitsOnRandomSuicideMissions" },
+                { "token": "TerranCustomLevel" },
+                { "token": "ZergCustomLevel" },
+                { "token": "ProtossCustomLevel" },
+                { "token": "TerranExpansionCustomLevel" },
+                { "token": "ZergExpansionCustomLevel" },
+                { "token": "ProtossExpansionCustomLevel" },
+                { "token": "TerranCampaignEasy" },
+                { "token": "TerranCampaignMedium" },
+                { "token": "TerranCampaignDifficult" },
+                { "token": "TerranCampaignInsane" },
+                { "token": "TerranCampaignAreaTown" },
+                { "token": "ZergCampaignEasy" },
+                { "token": "ZergCampaignMedium" },
+                { "token": "ZergCampaignDifficult" },
+                { "token": "ZergCampaignInsane" },
+                { "token": "ZergCampaignAreaTown" },
+                { "token": "ProtossCampaignEasy" },
+                { "token": "ProtossCampaignMedium" },
+                { "token": "ProtossCampaignDifficult" },
+                { "token": "ProtossCampaignInsane" },
+                { "token": "ProtossCampaignAreaTown" },
+                { "token": "ExpansionTerranCampaignEasy" },
+                { "token": "ExpansionTerranCampaignMedium" },
+                { "token": "ExpansionTerranCampaignDifficult" },
+                { "token": "ExpansionTerranCampaignInsane" },
+                { "token": "ExpansionTerranCampaignAreaTown" },
+                { "token": "ExpansionZergCampaignEasy" },
+                { "token": "ExpansionZergCampaignMedium" },
+                { "token": "ExpansionZergCampaignDifficult" },
+                { "token": "ExpansionZergCampaignInsane" },
+                { "token": "ExpansionZergCampaignAreaTown" },
+                { "token": "ExpansionProtossCampaignEasy" },
+                { "token": "ExpansionProtossCampaignMedium" },
+                { "token": "ExpansionProtossCampaignDifficult" },
+                { "token": "ExpansionProtossCampaignInsane" },
+                { "token": "ExpansionProtossCampaignAreaTown" },
+                { "token": "ClearPreviousCombatData" },
+                { "token": "SetPlayerToEnemyHere" },
+                { "token": "SetPlayerToAllyHere" },
+                { "token": "SwitchComputerPlayerToRescuePassive" },
+                { "token": "TurnOnSharedVisionOfPlayer1WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer2WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer3WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer4WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer5WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer6WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer7WithCurrentPlayer" },
+                { "token": "TurnOnSharedVisionOfPlayer8WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer1WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer2WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer3WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer4WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer5WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer6WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer7WithCurrentPlayer" },
+                { "token": "TurnOffSharedVisionOfPlayer8WithCurrentPlayer" },
+                { "token": "Terran3ZergTown" },
+                { "token": "Terran5TerranMainTown" },
+                { "token": "Terran5TerranHarvestTown" },
+                { "token": "Terran6AirAttackZerg" },
+                { "token": "Terran6GroundAttackZerg" },
+                { "token": "Terran6ZergSupportTown" },
+                { "token": "Terran7BottomZergTown" },
+                { "token": "Terran7RightZergTown" },
+                { "token": "Terran7MiddleZergTown" },
+                { "token": "Terran8CondeferateTown" },
+                { "token": "Terran9LightAttack" },
+                { "token": "Terran9HeavyAttack" },
+                { "token": "Terran10CondeferateTowns" },
+                { "token": "Terran11ZergTown" },
+                { "token": "Terran11LowerProtossTown" },
+                { "token": "Terran11UpperProtossTown" },
+                { "token": "Terran12NukeTown" },
+                { "token": "Terran12PhoenixTown" },
+                { "token": "Terran12TankTown" },
+                { "token": "Terran1ElectronicDistribution" },
+                { "token": "Terran2ElectronicDistribution" },
+                { "token": "Terran3ElectronicDistribution" },
+                { "token": "Terran1Shareware" },
+                { "token": "Terran2Shareware" },
+                { "token": "Terran3Shareware" },
+                { "token": "Terran4Shareware" },
+                { "token": "Terran5Shareware" },
+                { "token": "Zerg1TerranTown" },
+                { "token": "Zerg2ProtossTown" },
+                { "token": "Zerg3TerranTown" },
+                { "token": "Zerg4RightTerranTown" },
+                { "token": "Zerg4LowerTerranTown" },
+                { "token": "Zerg6ProtossTown" },
+                { "token": "Zerg7AirTown" },
+                { "token": "Zerg7GroundTown" },
+                { "token": "Zerg7SupportTown" },
+                { "token": "Zerg8ScoutTown" },
+                { "token": "Zerg8TemplarTown" },
+                { "token": "Zerg9TealProtoss" },
+                { "token": "Zerg9LeftYellowProtoss" },
+                { "token": "Zerg9RightYellowProtoss" },
+                { "token": "Zerg9LeftOrangeProtoss" },
+                { "token": "Zerg9RightOrangeProtoss" },
+                { "token": "Zerg10LeftTealAttack" },
+                { "token": "Zerg10RightTealSupport" },
+                { "token": "Zerg10LeftYellowSupport" },
+                { "token": "Zerg10RightYellowAttack" },
+                { "token": "Zerg10RedProtoss" },
+                { "token": "Protoss1ZergTown" },
+                { "token": "Protoss2ZergTown" },
+                { "token": "Protoss3AirZergTown" },
+                { "token": "Protoss3GroundZergTown" },
+                { "token": "Protoss4ZergTown" },
+                { "token": "Protoss5ZergTownIsland" },
+                { "token": "Protoss5ZergTownBase" },
+                { "token": "Protoss7LeftProtossTown" },
+                { "token": "Protoss7RightProtossTown" },
+                { "token": "Protoss7ShrineProtoss" },
+                { "token": "Protoss8LeftProtossTown" },
+                { "token": "Protoss8RightProtossTown" },
+                { "token": "Protoss8ProtossDefenders" },
+                { "token": "Protoss9GroundZerg" },
+                { "token": "Protoss9AirZerg" },
+                { "token": "Protoss9SpellZerg" },
+                { "token": "Protoss10MiniTowns" },
+                { "token": "Protoss10MiniTownMaster" },
+                { "token": "Protoss10OvermindDefenders" },
+                { "token": "BroodWarProtoss1TownA" },
+                { "token": "BroodWarProtoss1TownB" },
+                { "token": "BroodWarProtoss1TownC" },
+                { "token": "BroodWarProtoss1TownD" },
+                { "token": "BroodWarProtoss1TownE" },
+                { "token": "BroodWarProtoss1TownF" },
+                { "token": "BroodWarProtoss2TownA" },
+                { "token": "BroodWarProtoss2TownB" },
+                { "token": "BroodWarProtoss2TownC" },
+                { "token": "BroodWarProtoss2TownD" },
+                { "token": "BroodWarProtoss2TownE" },
+                { "token": "BroodWarProtoss2TownF" },
+                { "token": "BroodWarProtoss3TownA" },
+                { "token": "BroodWarProtoss3TownB" },
+                { "token": "BroodWarProtoss3TownC" },
+                { "token": "BroodWarProtoss3TownD" },
+                { "token": "BroodWarProtoss3TownE" },
+                { "token": "BroodWarProtoss3TownF" },
+                { "token": "BroodWarProtoss4TownA" },
+                { "token": "BroodWarProtoss4TownB" },
+                { "token": "BroodWarProtoss4TownC" },
+                { "token": "BroodWarProtoss4TownD" },
+                { "token": "BroodWarProtoss4TownE" },
+                { "token": "BroodWarProtoss4TownF" },
+                { "token": "BroodWarProtoss5TownA" },
+                { "token": "BroodWarProtoss5TownB" },
+                { "token": "BroodWarProtoss5TownC" },
+                { "token": "BroodWarProtoss5TownD" },
+                { "token": "BroodWarProtoss5TownE" },
+                { "token": "BroodWarProtoss5TownF" },
+                { "token": "BroodWarProtoss6TownA" },
+                { "token": "BroodWarProtoss6TownB" },
+                { "token": "BroodWarProtoss6TownC" },
+                { "token": "BroodWarProtoss6TownD" },
+                { "token": "BroodWarProtoss6TownE" },
+                { "token": "BroodWarProtoss6TownF" },
+                { "token": "BroodWarProtoss7TownA" },
+                { "token": "BroodWarProtoss7TownB" },
+                { "token": "BroodWarProtoss7TownC" },
+                { "token": "BroodWarProtoss7TownD" },
+                { "token": "BroodWarProtoss7TownE" },
+                { "token": "BroodWarProtoss7TownF" },
+                { "token": "BroodWarProtoss8TownA" },
+                { "token": "BroodWarProtoss8TownB" },
+                { "token": "BroodWarProtoss8TownC" },
+                { "token": "BroodWarProtoss8TownD" },
+                { "token": "BroodWarProtoss8TownE" },
+                { "token": "BroodWarProtoss8TownF" },
+                { "token": "BroodWarTerran1TownA" },
+                { "token": "BroodWarTerran1TownB" },
+                { "token": "BroodWarTerran1TownC" },
+                { "token": "BroodWarTerran1TownD" },
+                { "token": "BroodWarTerran1TownE" },
+                { "token": "BroodWarTerran1TownF" },
+                { "token": "BroodWarTerran2TownA" },
+                { "token": "BroodWarTerran2TownB" },
+                { "token": "BroodWarTerran2TownC" },
+                { "token": "BroodWarTerran2TownD" },
+                { "token": "BroodWarTerran2TownE" },
+                { "token": "BroodWarTerran2TownF" },
+                { "token": "BroodWarTerran3TownA" },
+                { "token": "BroodWarTerran3TownB" },
+                { "token": "BroodWarTerran3TownC" },
+                { "token": "BroodWarTerran3TownD" },
+                { "token": "BroodWarTerran3TownE" },
+                { "token": "BroodWarTerran3TownF" },
+                { "token": "BroodWarTerran4TownA" },
+                { "token": "BroodWarTerran4TownB" },
+                { "token": "BroodWarTerran4TownC" },
+                { "token": "BroodWarTerran4TownD" },
+                { "token": "BroodWarTerran4TownE" },
+                { "token": "BroodWarTerran4TownF" },
+                { "token": "BroodWarTerran5TownA" },
+                { "token": "BroodWarTerran5TownB" },
+                { "token": "BroodWarTerran5TownC" },
+                { "token": "BroodWarTerran5TownD" },
+                { "token": "BroodWarTerran5TownE" },
+                { "token": "BroodWarTerran5TownF" },
+                { "token": "BroodWarTerran6TownA" },
+                { "token": "BroodWarTerran6TownB" },
+                { "token": "BroodWarTerran6TownC" },
+                { "token": "BroodWarTerran6TownD" },
+                { "token": "BroodWarTerran6TownE" },
+                { "token": "BroodWarTerran6TownF" },
+                { "token": "BroodWarTerran7TownA" },
+                { "token": "BroodWarTerran7TownB" },
+                { "token": "BroodWarTerran7TownC" },
+                { "token": "BroodWarTerran7TownD" },
+                { "token": "BroodWarTerran7TownE" },
+                { "token": "BroodWarTerran7TownF" },
+                { "token": "BroodWarTerran8TownA" },
+                { "token": "BroodWarTerran8TownB" },
+                { "token": "BroodWarTerran8TownC" },
+                { "token": "BroodWarTerran8TownD" },
+                { "token": "BroodWarTerran8TownE" },
+                { "token": "BroodWarTerran8TownF" },
+                { "token": "BroodWarZerg1TownA" },
+                { "token": "BroodWarZerg1TownB" },
+                { "token": "BroodWarZerg1TownC" },
+                { "token": "BroodWarZerg1TownD" },
+                { "token": "BroodWarZerg1TownE" },
+                { "token": "BroodWarZerg1TownF" },
+                { "token": "BroodWarZerg2TownA" },
+                { "token": "BroodWarZerg2TownB" },
+                { "token": "BroodWarZerg2TownC" },
+                { "token": "BroodWarZerg2TownD" },
+                { "token": "BroodWarZerg2TownE" },
+                { "token": "BroodWarZerg2TownF" },
+                { "token": "BroodWarZerg3TownA" },
+                { "token": "BroodWarZerg3TownB" },
+                { "token": "BroodWarZerg3TownC" },
+                { "token": "BroodWarZerg3TownD" },
+                { "token": "BroodWarZerg3TownE" },
+                { "token": "BroodWarZerg3TownF" },
+                { "token": "BroodWarZerg4TownA" },
+                { "token": "BroodWarZerg4TownB" },
+                { "token": "BroodWarZerg4TownC" },
+                { "token": "BroodWarZerg4TownD" },
+                { "token": "BroodWarZerg4TownE" },
+                { "token": "BroodWarZerg4TownF" },
+                { "token": "BroodWarZerg5TownA" },
+                { "token": "BroodWarZerg5TownB" },
+                { "token": "BroodWarZerg5TownC" },
+                { "token": "BroodWarZerg5TownD" },
+                { "token": "BroodWarZerg5TownE" },
+                { "token": "BroodWarZerg5TownF" },
+                { "token": "BroodWarZerg6TownA" },
+                { "token": "BroodWarZerg6TownB" },
+                { "token": "BroodWarZerg6TownC" },
+                { "token": "BroodWarZerg6TownD" },
+                { "token": "BroodWarZerg6TownE" },
+                { "token": "BroodWarZerg6TownF" },
+                { "token": "BroodWarZerg7TownA" },
+                { "token": "BroodWarZerg7TownB" },
+                { "token": "BroodWarZerg7TownC" },
+                { "token": "BroodWarZerg7TownD" },
+                { "token": "BroodWarZerg7TownE" },
+                { "token": "BroodWarZerg7TownF" },
+                { "token": "BroodWarZerg8TownA" },
+                { "token": "BroodWarZerg8TownB" },
+                { "token": "BroodWarZerg8TownC" },
+                { "token": "BroodWarZerg8TownD" },
+                { "token": "BroodWarZerg8TownE" },
+                { "token": "BroodWarZerg8TownF" },
+                { "token": "BroodWarZerg9TownA" },
+                { "token": "BroodWarZerg9TownB" },
+                { "token": "BroodWarZerg9TownC" },
+                { "token": "BroodWarZerg9TownD" },
+                { "token": "BroodWarZerg9TownE" },
+                { "token": "BroodWarZerg9TownF" },
+                { "token": "BroodWarZerg10TownA" },
+                { "token": "BroodWarZerg10TownB" },
+                { "token": "BroodWarZerg10TownC" },
+                { "token": "BroodWarZerg10TownD" },
+                { "token": "BroodWarZerg10TownE" },
+                { "token": "BroodWarZerg10TownF" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "LeaderboardType",
+            "tokens":[
+                { "token": "ControlAtLocation" },
+                { "token": "Control" },
+                { "token": "Greed" },
+                { "token": "Kills" },
+                { "token": "Points" },
+                { "token": "Resources" }
+            ]
+        },
+        {
+            "kind": "Enum",
+            "type": "Location",
+            "tokens":[
+                { "token": "AnyLocation " }
+            ]
+        }
+    ]
+}

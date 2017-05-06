@@ -1,0 +1,165 @@
+{
+  "name": "langums",
+  "displayName": "LangUMS",
+  "version": "0.4.0",
+  "publisher": "glenstorm",
+  "description": "LangUMS integration",
+  "authors": [
+    {
+      "name": "Matthew Burton"
+    },
+    {
+      "name": "Alexander Dzhoganov",
+      "email": "alexander.dzhoganov@gmail.com"
+    }
+  ],
+  "engines": {
+    "vscode": "^1.1.0",
+    "node": "^6.5.0"
+  },
+  "icon": "images/mock-debug-icon.svg",
+  "categories": [
+    "Debuggers"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Microsoft/vscode-mock-debug.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Microsoft/vscode-mock-debug/issues"
+  },
+  "dependencies": {
+    "bw-chk": "^1.1.0",
+    "vscode-debugadapter": "^1.19.0",
+    "vscode-debugprotocol": "^1.19.0"
+  },
+  "devDependencies": {
+    "@types/es6-collections": "^0.5.29",
+    "@types/es6-promise": "^0.0.32",
+    "@types/mocha": "^2.2.33",
+    "@types/node": "^6.0.50",
+    "typescript": "^2.2.1",
+    "mocha": "^3.1.2",
+    "vscode": "^1.0.3",
+    "vscode-debugadapter-testsupport": "^1.19.0",
+    "tslint": "^5.1.0"
+  },
+  "scripts": {
+    "prepublish": "tsc -p ./src",
+    "compile": "tsc -p ./src",
+    "tslint": "tslint ./src/**/*.ts",
+    "watch": "tsc -w -p ./src",
+    "test": "mocha -u tdd ./out/tests/",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "main": "./out/extension",
+  "activationEvents": [
+    "onCommand:extension.langums.provideInitialConfigurations"
+  ],
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "LangUMS Configuration",
+      "properties": {
+        "langums.codeCompletion": {
+          "type": "boolean",
+          "default": true,
+          "description": "Provide code completion."
+        },
+        "langums.codeCompletionSnippets": {
+          "type": "boolean",
+          "default": true,
+          "description": "Use snippets when completing functions."
+        },
+        "langums.mapPath": {
+          "type": "string",
+          "description": "The map path for reading location symbols"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "langums",
+        "aliases": [
+          "LangUMS",
+          "langums"
+        ],
+        "extensions": [
+          ".l"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "langums",
+        "scopeName": "source.langums",
+        "path": "./syntaxes/langums.tmLanguage.json"
+      }
+    ],
+    "breakpoints": [
+      {
+        "language": "langums"
+      }
+    ],
+    "debuggers": [
+      {
+        "type": "langums",
+        "label": "LangUMS Debug",
+        "program": "./out/adapter.js",
+        "runtime": "node",
+        "configurationSnippets": [
+          {
+            "label": "LangUMS: Launch",
+            "description": "A new configuration for launching an LangUMS debug session",
+            "body": {
+              "type": "langums",
+              "request": "launch",
+              "name": "${2:Launch Program}",
+              "program": "^\"\\${workspaceRoot}/${1:Program}\""
+            }
+          }
+        ],
+        "configurationAttributes": {
+          "launch": {
+            "required": [
+              "langums",
+              "map",
+              "lang",
+              "dst"
+            ],
+            "properties": {
+              "langums": {
+                "type": "string",
+                "description": "Absolute path to langums.exe.",
+                "default": "${workspaceRoot}/langums.exe"
+              },
+              "map": {
+                "type": "string",
+                "description": "Absolute path to input .scx file.",
+                "default": "${workspaceRoot}/my_map.scx"
+              },
+              "lang": {
+                "type": "string",
+                "description": "Absolute path to input .l file.",
+                "default": "${workspaceRoot}/my_map.l"
+              },
+              "dst": {
+                "type": "string",
+                "description": "Absolute path to output .scx file.",
+                "default": "${workspaceRoot}/my_map_release.scx"
+              },
+              "trace": {
+                "type": "boolean",
+                "description": "Enable logging of the debugger protocol.",
+                "default": true
+              }
+            }
+          }
+        },
+        "initialConfigurations": "extension.langums.provideInitialConfigurations"
+      }
+    ]
+  }
+}
