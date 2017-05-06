@@ -1,5 +1,7 @@
 .DS_Store
-node_modules/
+node_modules/*
 out/
 npm-debug.log
 mock-debug.txt
+!node_modules/bw-chk/
+node_modules/bw-chk/starcraft_brood_war_maps_archive/

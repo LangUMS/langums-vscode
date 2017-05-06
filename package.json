@@ -1,18 +1,21 @@
 {
   "name": "langums",
   "displayName": "LangUMS",
-  "version": "0.4.4",
+  "version": "0.4.3",
   "publisher": "langums",
   "description": "LangUMS integration",
   "authors": [
     {
-      "name": "Matthew Burton"
+      "name": "Matthew Burton",
+      "email": "BurtonMatthewA@gmail.com"
     },
     {
       "name": "Alexander Dzhoganov",
       "email": "alexander.dzhoganov@gmail.com"
     }
   ],
+  "license": "SEE LICENSE IN LICENSE",
+  "homepage": "https://github.com/BurtonMatthew/langums-vscode",
   "engines": {
     "vscode": "^1.1.0",
     "node": "^6.5.0"
@@ -24,13 +27,15 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/Microsoft/vscode-mock-debug.git"
+    "url": "https://github.com/LangUMS/langums-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/Microsoft/vscode-mock-debug/issues"
+    "url": "https://github.com/LangUMS/langums-vscode/issues"
   },
   "dependencies": {
     "bw-chk": "^1.1.0",
+    "scm-extractor": "^1.0.6",
+    "concat-stream":"^1.6.0",
     "vscode-debugadapter": "^1.19.0",
     "vscode-debugprotocol": "^1.19.0"
   },
@@ -55,7 +60,8 @@
   },
   "main": "./out/extension",
   "activationEvents": [
-    "onCommand:extension.langums.provideInitialConfigurations"
+    "onCommand:extension.langums.provideInitialConfigurations",
+    "*"
   ],
   "contributes": {
     "configuration": {
@@ -154,11 +160,6 @@
                 "type": "boolean",
                 "description": "Enable logging of the debugger protocol.",
                 "default": true
-              },
-              "compileOnly": {
-                "type": "boolean",
-                "description": "If true will not launch a debugger session, but just compiles the map.",
-                "default": false
               }
             }
           }
@@ -170,8 +171,7 @@
             "langums": "${workspaceRoot}/langums.exe",
             "map": "${workspaceRoot}/my_map.scx",
             "lang": "${workspaceRoot}/my_map.l",
-            "dst": "${workspaceRoot}/my_map_release.scx",
-            "compileOnly": false
+            "dst": "${workspaceRoot}/my_map_release.scx"
         }]
       }
     ]
