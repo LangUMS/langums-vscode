@@ -1,8 +1,8 @@
 {
-  "name": "langums",
+  "name": "langums-experimental",
   "displayName": "LangUMS",
-  "version": "0.4.0",
-  "publisher": "glenstorm",
+  "version": "0.4.1",
+  "publisher": "langums",
   "description": "LangUMS integration",
   "authors": [
     {
