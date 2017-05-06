@@ -5,11 +5,11 @@ export class DebuggerApi extends EventEmitter {
 
 	private process: ChildProcess;
 
-	constructor(langumsPath, srcPath, langPath, dstPath, logger) {
+	constructor(langumsPath, srcPath, langPath, dstPath, compileOnly) {
 		super();
 
 		this.process = spawn(langumsPath, [
-			'--debug-vscode',
+			compileOnly ? '' : '--debug-vscode',
 			'--src', srcPath,
 			'--lang', langPath,
 			'--dst', dstPath
@@ -38,7 +38,6 @@ export class DebuggerApi extends EventEmitter {
 				this.processEvent(event);
 				buffer = buffer.substr(newLine + 1);
 				newLine = buffer.indexOf('\n');
-				logger.warn(buffer);
 			}
 		});
 	}

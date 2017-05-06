@@ -18,6 +18,7 @@ export interface LaunchRequestArguments extends DebugProtocol.LaunchRequestArgum
 	map: string; // input .scx path
 	lang: string; // input source path
 	dst: string; // destination .scx path
+	compileOnly: boolean; // if set doesn't launch a debug session
 	trace?: boolean; // enable protocol debug logging
 }
 
@@ -46,7 +47,7 @@ class LangumsDebugSession extends LoggingDebugSession {
 		this.langPath = args.lang;
 
 		logger.warn('Launching LangUMS');
-		this.api = new DebuggerApi(args.langums, args.map, args.lang, args.dst, logger);
+		this.api = new DebuggerApi(args.langums, args.map, args.lang, args.dst, args.compileOnly);
 
 		this.api.on('output', message => {
 			this.sendEvent(new OutputEvent(message + '\n', "log"));
