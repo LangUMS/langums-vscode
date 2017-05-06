@@ -91,6 +91,10 @@
 				{
 					"name": "variable.parameter.langums",
 					"match": "\\b(AnyLocation)\\b"
+				},
+				{
+					"name": "constant.numeric.langums",
+					"match": "\\b(\\d+|0[xX][0-9a-fA-F]+)\\b"
 				}
 			]
 		},
